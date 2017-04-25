@@ -24,7 +24,7 @@ namespace ZeratoRDesktop
             using (WebClient webClient = new WebClient())
             {
                 Console.WriteLine("Getting background URL...");
-                String data = webClient.DownloadString("http://zerator.tv/wp-json/pages/8");
+                String data = webClient.DownloadString("http://zerator.com/wp-json/wp/v2/pages/8");
                 data = data.Replace("\\", "");
                 MatchCollection collection = Regex.Matches(data, pattern);
                 String backgroundUrl = null;
